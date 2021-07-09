@@ -77,9 +77,19 @@ class _QuizState extends State<Quiz> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget> [
-                  RaisedButton(onPressed: () => _previousQuestion(),
-                    color: Colors.blueGrey.shade900,
-                    child: Icon(Icons.arrow_back, color: Colors.white,),),
+                  ElevatedButton(onPressed: _previousQuestion,
+                      child: Icon(Icons.arrow_back, color: Colors.white,),
+                    style: ElevatedButton.styleFrom(
+                      primary: Colors.blueGrey.shade900
+                    ),
+                  ),
+
+                  // RaisedButton(onPressed: () => _previousQuestion(),
+                  //   color: Colors.blueGrey.shade900,
+                  //   child: Icon(Icons.arrow_back, color: Colors.white,),),
+                  // ElevatedButton(onPressed: _checkAnswer(true),
+                  // child: Text("TRUE", style: TextStyle(color: Colors.white),),
+                  // ),
 
                   RaisedButton(onPressed: () => _checkAnswer(true),
                   color: Colors.blueGrey.shade900,
@@ -89,9 +99,16 @@ class _QuizState extends State<Quiz> {
                     color: Colors.blueGrey.shade900,
                     child: Text("FALSE", style: TextStyle(color: Colors.white),),),
 
-                  RaisedButton(onPressed: () => _nextQuestion(),
-                    color: Colors.blueGrey.shade900,
-                    child: Icon(Icons.arrow_forward, color: Colors.white,),)
+                  ElevatedButton(onPressed: _nextQuestion,
+                    child: Icon(Icons.arrow_forward, color: Colors.white,),
+                    style: ElevatedButton.styleFrom(
+                        primary: Colors.blueGrey.shade900
+                    ),
+                  ),
+
+                  // RaisedButton(onPressed: () => _nextQuestion(),
+                  //   color: Colors.blueGrey.shade900,
+                  //   child: Icon(Icons.arrow_forward, color: Colors.white,),)
 
                 ],
               ),
